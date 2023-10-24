@@ -11,8 +11,8 @@ function App() {
   return (
     <>
        <Header />
-       <Contacto />
-       {/* <MoviesList /> */}
+      {/*  <Contacto /> */}
+       <MoviesList /> 
     </>
   )
 }
