@@ -1,5 +1,6 @@
 import { Header } from "./componente/Header/Header"
 import Contacto from "./componente/Contacto/Contacto"
+import 'tailwindcss/tailwind.css';
 import MoviesList from "./ejemplo/MovieList"
 
 

@@ -4,26 +4,31 @@
 import React, { useEffect, useState } from 'react';
 
 const MoviesList = () => {
-  const [datos, setDatos] = useState([]);
+  const [movie, setMovie] = useState([]);
+  console.log(movie)
   /* const [loading, setLoading] = useState(true);  */
 
   useEffect(() => {
     // se realiza la peticion a la api
-    fetch('https://api.themoviedb.org/3/movie/11?api_key=880816531571af44aa52a8138da56066') 
+    fetch('https://api.themoviedb.org/3/movie/12?api_key=7c22d02ca9e5aa82f0aa3f3ec21318b9') 
       .then((response) => response.json()) // Convierte la respuesta a JSON
       .then((data) => {
-          console.log(data)
+          setMovie(data)
       })
   }, []);
   
 
   return (
-    <div className='container my-5'>
+    <div>
       <h2>List movies:</h2>
       <hr/>
-      <ul>
-       
+      {
+         <ul>
+        <h2>{movie.tittle}</h2>
+        <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.id}/>;
       </ul> 
+      }
+     
     </div>
   )
 }
