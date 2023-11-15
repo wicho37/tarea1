@@ -1,0 +1,18 @@
+.card {
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    
+}
+
+.lista {
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
